@@ -7,27 +7,12 @@
 	</head>
 
 	<body>
-		<p>Adder... <span id='op'>5+3</span>
-			<span id="res"></span> <a href="javascript:adder('op','res')">Add!</a>
-		</p>
-		<p> <span id="rand"></span> <a href="javascript:adder_rand('op')">Change number</a></p>
-
-		<script type="text/javascript">
-			function changer(id, newvalue){
-				document.getElementById(id).innerHTML = newvalue;
-			};
-
-			function adder(operation, res){
-				var element = document.getElementById(operation).innerHTML.split("+");
-				var result = parseInt(element[0]) + parseInt(element[1]);
-				changer(res, '='+result);
-			};
-
-			function adder_rand(operation){
-				var element1 = Math.round(Math.random()*1000);
-				var element2 = Math.round(Math.random()*1000);
-				document.getElementById(operation).innerHTML = element1 + "+" + element2;
-			}
-		</script>
+		<div>
+			<p>Adder... <span id='op'>5+3</span>
+				<span id="res"></span> <a href="javascript:adder('op','res')">Add!</a>
+			</p>
+			<p> <span id="rand"></span> <a href="javascript:adder_rand('op')">Change number</a></p>
+		</div>
+		<script src="sumador.js" type="text/javascript"></script>		
 	</body>
 </html>
